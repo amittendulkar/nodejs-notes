@@ -1,0 +1,23 @@
+* Installation steps
+With Ubuntu you need to install nodejs with =nvm= (Node Version Manager).
+#+BEGIN_SRC sh
+# Refer to https://github.com/creationix/nvm#install-script
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+# Open new terminal and check nvm command exists
+command -v nvm
+# Download, compile, install latest release of node
+nvm install node
+#+END_SRC
+
+Henceforth the =npm= command should refer to the npm installed by =nvm=.
+* Setting up Angular
+
+#+BEGIN_SRC sh
+# Install @angular/cli globally
+npm install -g @angular/cli
+# In new terminal init new app
+ng new my-app
+# Serve the application
+cd my-app
+ng serve --open
+#+END_SRC
